@@ -1,4 +1,4 @@
-# ros 2のmypkg
+# ros 2_mypkg
 
 # 必要なソフトウェア
 * Python

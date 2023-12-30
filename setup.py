@@ -18,7 +18,7 @@ setup(
     zip_safe=True,
     maintainer='yuta1075',
     maintainer_email='a@hoge.com',
-    description='a package for practic',
+    description='a package for practice',
     license='BSD-3-Clause',
     tests_require=['pytest'],
     entry_points={

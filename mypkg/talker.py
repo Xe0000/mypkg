@@ -3,19 +3,21 @@
 
 import rclpy                     #ROS 2のクライアントのためのライブラリ
 from rclpy.node import Node      #ノードを実装するためのNodeクラス（クラスは第10回で）
-from std_msgs.msg import Int16   #通信の型（16ビットの符号付き整数）
+from std_msgs.msg import Int16MultiArray
 
 rclpy.init()
 node = Node("talker")            #ノード作成（nodeという「オブジェクト」を作成）
-pub = node.create_publisher(Int16, "countup", 10)   #パブリッシャのオブジェクト作成
-n = 0 #カウント用変数
+pub = node.create_publisher(Int16MultiArray, "countup", 10)  #パブリッシャのオブジェクト作成
+n1, n2, n3 = 0, 0, 0  # カウント用変数を初期化
 
 def cb():          #17行目で定期実行されるコールバック関数
-    global n       #関数を抜けてもnがリセットされないようにしている
-    msg = Int16()  #メッセージの「オブジェクト」
-    msg.data = n   #msgオブジェクトの持つdataにnを結び付け
+    global n1, n2, n3      #関数を抜けてもnがリセットされないようにしている
+    msg = Int16MultiArray()  #メッセージの「オブジェクト」
+    msg.data = [n1, n2, n3]
     pub.publish(msg)        #pubの持つpublishでメッセージ送信
-    n += 1
+    n1 += 1
+    n2 = 2 * n1
+    n3 = n1 * n1
 
 node.create_timer(0.5, cb)  #タイマー設定
 rclpy.spin(node)

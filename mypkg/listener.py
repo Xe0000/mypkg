@@ -3,13 +3,15 @@
 
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Int16
+from std_msgs.msg import Int16MultiArray
 
 def cb(msg):
     global node
-    node.get_logger().info("Listen: %d" % msg.data)
+    n1, n2, n3 = msg.data
+    node.get_logger().info("Listen : %d,%d,%d" % (n1, n2, n3))
+
 
 rclpy.init()
 node = Node("listener")
-pub = node.create_subscription(Int16, "countup", cb, 10)
+sub = node.create_subscription(Int16MultiArray, "countup", cb, 10)
 rclpy.spin(node)

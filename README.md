@@ -16,7 +16,7 @@
 ```bash
 ros2 launch mypkg talk_listen.launch.py
 ```
-* 結果
+* 実行結果
 ```bash
 [INFO] [launch]: All log files can be found below /home/yuta1075/.ros/log/2023-12-30-22-32-30-396122-LAPTOP-RCB6ATE5-12494
 [INFO] [launch]: Default logging verbosity is set to INFO

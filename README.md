@@ -1,9 +1,17 @@
 # ros 2のマイパッケージ
-
 [![test](https://github.com/Xe0000/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/Xe0000/mypkg/actions/workflows/test.yml)
+## トピック
+### talker.py
+
+### listener.py
+
+### talk_listen.launch.py
+
+
+
 ## 実行方法
 ### 実行方法１
-* 以下のコマンドを実行してtalkerとlistenerを同時に起動
+* ros2 launchでの実行
 ```bash
 ros2 launch mypkg talk_listen.launch.py
 ```
@@ -28,7 +36,25 @@ ros2 launch mypkg talk_listen.launch.py
 * 終了は'Ctrl＋C'
 
 ### 実行方法２
-* 以下の
+* ros2 runでの実行
+* 'colcon build'と'source ~/.bash'をした後に以下を端末を２つ使い実行
+```bash
+端末1$ ros2 run mypkg talker
+端末2$ ros2 run mypkg listener
+```
+### 実行結果
+```bash
+[INFO] [1703981199.132193643] [listener]: Listen : 0,0,0
+[INFO] [1703981199.616718103] [listener]: Listen : 1,2,1
+[INFO] [1703981200.141864033] [listener]: Listen : 2,4,4
+[INFO] [1703981200.634339358] [listener]: Listen : 3,6,9
+[INFO] [1703981201.118360392] [listener]: Listen : 4,8,16
+[INFO] [1703981201.634679984] [listener]: Listen : 5,10,25
+[INFO] [1703981202.108209742] [listener]: Listen : 6,12,36
+[INFO] [1703981202.614653446] [listener]: Listen : 7,14,49
+```
+* 終了は'Ctrl＋C'
+
 ## 必要なソフトウェア
 * ROS 2
 * Python

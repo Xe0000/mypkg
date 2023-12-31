@@ -62,6 +62,7 @@ ros2 launch mypkg talk_listen.launch.py
     * テスト済み:3.7~3.10
 ## テスト環境
 * Ubuntu20.04 on Windows
+* ROS2 foxy
 
 ## 権利関係
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．

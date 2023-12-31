@@ -43,7 +43,7 @@ ros2 launch mypkg talk_listen.launch.py
 端末1$ ros2 run mypkg talker
 端末2$ ros2 run mypkg listener
 ```
-### 実行結果
+* 実行結果
 ```bash
 [INFO] [1703981199.132193643] [listener]: Listen : 0,0,0
 [INFO] [1703981199.616718103] [listener]: Listen : 1,2,1

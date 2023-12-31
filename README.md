@@ -2,11 +2,11 @@
 [![test](https://github.com/Xe0000/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/Xe0000/mypkg/actions/workflows/test.yml)
 ## 説明
 ### talker.py
-* 数字をカウントして'countup'を通じて送信
+* 数字をカウントして(`/countup`)を通じて送信
     * メッセージの型は１６ビット符号付き整数
     * n,2*n,n*nの順で送信
 ### listener.py
-* 'countup'からメッセージをもらって表示
+* (`/countup`)からメッセージをもらって表示
 ### countup
 * 16ビットの符号付き整数をカウントアップする
 
@@ -34,11 +34,11 @@ ros2 launch mypkg talk_listen.launch.py
 [listener-2] [INFO] [1703943155.831788851] [listener]: Listen : 9,18,81
 [listener-2] [INFO] [1703943156.328677685] [listener]: Listen : 10,20,100
 ```
-* 終了は'Ctrl＋C'
+* 終了は`Ctrl＋C`
 
 ### 実行方法２
 * ros2 runでの実行
-* 'colcon build'と'source ~/.bash'をした後に以下を端末を２つ使い実行
+* `colcon build`と`source ~/.bash`をした後に以下を端末を２つ使い実行
 ```bash
 端末1$ ros2 run mypkg talker
 端末2$ ros2 run mypkg listener
@@ -54,7 +54,7 @@ ros2 launch mypkg talk_listen.launch.py
 [INFO] [1703981202.108209742] [listener]: Listen : 6,12,36
 [INFO] [1703981202.614653446] [listener]: Listen : 7,14,49
 ```
-* 終了は'Ctrl＋C'
+* 終了は`Ctrl＋C`
 
 ## 必要なソフトウェア
 * ROS 2

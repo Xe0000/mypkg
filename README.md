@@ -2,12 +2,13 @@
 [![test](https://github.com/Xe0000/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/Xe0000/mypkg/actions/workflows/test.yml)
 ## トピック
 ### talker.py
-
+* 数字をカウントして'countup'を通じて送信
+    * メッセージの型は１６ビット符号付き整数
+    * n,2*n,n*nの順で送信
 ### listener.py
-
-### talk_listen.launch.py
-
-
+* 'countup'からメッセージをもらって表示
+### countup
+* 16ビットの符号付き整数をカウントアップする
 
 ## 実行方法
 ### 実行方法１

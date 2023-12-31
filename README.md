@@ -1,6 +1,6 @@
 # ros 2のマイパッケージ
 [![test](https://github.com/Xe0000/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/Xe0000/mypkg/actions/workflows/test.yml)
-## トピック
+## 説明
 ### talker.py
 * 数字をカウントして'countup'を通じて送信
     * メッセージの型は１６ビット符号付き整数

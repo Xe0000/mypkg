@@ -10,8 +10,8 @@ node = Node("talker")            #ノード作成（nodeという「オブジェ
 pub = node.create_publisher(Int16MultiArray, "countup", 10)  #パブリッシャのオブジェクト作成
 n1, n2, n3 = 0, 0, 0  # カウント用変数を初期化
 
-def cb():          #17行目で定期実行されるコールバック関数
-    global n1, n2, n3      #関数を抜けてもnがリセットされないようにしている
+def cb():          #コールバック関数
+    global n1, n2, n3      
     msg = Int16MultiArray()  #メッセージの「オブジェクト」
     msg.data = [n1, n2, n3]
     pub.publish(msg)        #pubの持つpublishでメッセージ送信

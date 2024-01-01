@@ -1,7 +1,8 @@
 # ros 2のマイパッケージ
+* このリポジトリを使うにはros2のインストールが必要です
 ![test](https://github.com/Xe0000/mypkg/actions/workflows/test.yml/badge.svg)
 ## 概要
-* このパッケージは、ROS 2を使用して、特定のトピック（countup）を介してメッセージを送受信するtalkerとlistenerという2つのノードを提供
+* このパッケージは、ROS 2を使用して、特定のトピック（countup）を介してメッセージを送受信するtalkerとlistenerという2つのノードを提供.ROS 2の基本的なパブリッシャとサブスクライバの概念を学ぶことができる.
 
 ## 説明
 ### talker.py
@@ -13,6 +14,28 @@
 ## トピックの説明
 ### countup
 * 16ビットの符号付き整数をカウントアップする
+
+##インストール方法と準備
+* ディレクトリを移動
+```bash
+cd ~/ros2_ws/src
+```
+* このリポジトリをクローン
+```bash
+git clone git@github.com:Xe0000/mypkg.git
+```
+* ワークスペースに移動
+```bash
+cd ~/ros2_ws
+```
+* ワークスペースをビルド
+```bash
+colcon build
+```
+* ビルドされたパッケージをソース
+```bash
+source ~/.bash
+```
 
 ## 実行方法
 ### 実行方法１
@@ -42,7 +65,7 @@ ros2 launch mypkg talk_listen.launch.py
 
 ### 実行方法２
 * ros2 runでの実行
-* `colcon build`と`source ~/.bash`をした後に以下を端末を２つ使い実行
+* 以下を端末を２つ使い実行
 ```bash
 端末1$ ros2 run mypkg talker
 端末2$ ros2 run mypkg listener

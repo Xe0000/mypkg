@@ -1,5 +1,5 @@
 # ros 2のマイパッケージ
-[![test](https://github.com/Xe0000/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/Xe0000/mypkg/actions/workflows/test.yml)
+![test](https://github.com/Xe0000/mypkg/actions/workflows/test.yml/badge.svg)
 ## 概要
 * このパッケージは、ROS 2を使用して、特定のトピック（countup）を介してメッセージを送受信するtalkerとlistenerという2つのノードを提供
 

@@ -8,16 +8,16 @@ from std_msgs.msg import Int16MultiArray
 rclpy.init()
 node = Node("talker")            #ノード作成（nodeという「オブジェクト」を作成）
 pub = node.create_publisher(Int16MultiArray, "countup", 10)  #パブリッシャのオブジェクト作成
-n1, n2, n3 = 0, 0, 0  # カウント用変数を初期化
+n1, n2 = 0, 0  # カウント用変数を初期化
 
 def cb():          #コールバック関数
-    global n1, n2, n3      
+    global n1, n2      
     msg = Int16MultiArray()  #メッセージの「オブジェクト」
-    msg.data = [n1, n2, n3]
+    msg.data = [n1, n2]
     pub.publish(msg)        #pubの持つpublishでメッセージ送信
     n1 += 1
     n2 = 2 * n1
-    n3 = n1 * n1
+    #n3 = n1 * n1
 
 node.create_timer(0.5, cb)  #タイマー設定
 rclpy.spin(node)

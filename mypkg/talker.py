@@ -13,7 +13,7 @@ n1, n2, n3 = 0, 0, 0  # カウント用変数を初期化
 def cb():          #コールバック関数
     global n1, n2, n3      
     msg = Int16MultiArray()  #メッセージの「オブジェクト」
-    msg.data = [n1, n2]
+    msg.data = [n1, n2, n3]
     pub.publish(msg)        #pubの持つpublishでメッセージ送信
     n1 += 1
     n2 = 2 * n1

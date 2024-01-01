@@ -65,7 +65,7 @@ ros2 launch mypkg talk_listen.launch.py
 * Python
     * テスト済み:3.7~3.10
 ## テスト環境
-* Ubuntu20.04 on Windows
+* Ubuntu20.04
 * ROS2 foxy
 
 ## 権利関係
